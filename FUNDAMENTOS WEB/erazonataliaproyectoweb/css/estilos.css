@@ -1,0 +1,14 @@
+:root {
+    --principal: #1a56c4;
+    --texto: rgb(7, 6, 29);
+    --fondo: rgb(231, 238, 255);
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+h1, h2, h3 {
+    color: var(--principal);
+}
