@@ -165,29 +165,30 @@ public class Lista {
 
         if (actual != null) {
             while (actual != null) {
-                if (actual.libro.getTitulo().equalsIgnoreCase(titulo.trim())) {
-                    encontrado = true;
+               while (actual != null) {
 
-                    if (actual == primero) {
+        if (actual.libro.getTitulo().equalsIgnoreCase(titulo)) {
 
-                        primero = primero.siguiente;
-                    } else if (actual == ultimo) {
-
-                        anterior.siguiente = null;
-                        ultimo = anterior;
-                    } else {
-                        anterior.siguiente = actual.siguiente;
-                    }
-                    System.out.println("");
-                    System.out.println("Nodo borrado con éxito");
-                    System.out.println("");
-                    mostrarLista();
-                    cantData--;
-
-                }
-
-                actual = actual.siguiente;
+            if (actual == primero) {
+                primero = actual.siguiente;
+            } else {
+                anterior.siguiente = actual.siguiente;
             }
+
+            if (actual == ultimo) {
+                ultimo = anterior;
+            }
+
+            cantData--;
+
+            System.out.println("Nodo borrado con éxito.");
+            mostrarLista();
+            return;
+        }
+
+        anterior = actual;
+        actual = actual.siguiente;
+    }
 
             if (encontrado == false){
 
@@ -197,8 +198,12 @@ public class Lista {
                 mostrarLista();
                 System.out.println("");
             }
-        } else {
+        }} else {
 
+            System.out.println("---------------------------------------");
+            System.out.println("La lista está vacía.");
+            System.out.println("");
+            System.out.println("---------------------------------------");
 
         }
     }
