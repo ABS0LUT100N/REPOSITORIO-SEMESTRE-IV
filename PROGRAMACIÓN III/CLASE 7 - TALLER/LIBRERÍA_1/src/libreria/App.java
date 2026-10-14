@@ -18,6 +18,6 @@ public class App {
         System.out.println("------------- MOSTRAR LISTADO LIBRO -------------");
         listaLibros.mostrarLista();
         System.out.println("------------- MOSTRAR TAMAÑO LISTADO -------------");
-        listaLibros.tamaño();
+        System.out.println(listaLibros.tamaño());
     }
 }

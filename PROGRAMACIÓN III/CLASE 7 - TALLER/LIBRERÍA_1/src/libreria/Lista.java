@@ -110,7 +110,8 @@ public class Lista {
 
             while (aux != null) {
                 
-                if (aux.libro.getTitulo() == titulo) {
+                if (aux.libro.getTitulo().equalsIgnoreCase(titulo.trim())) {
+                    
                     encontrado = true;
 
                     System.out.println("Libro encontrado: ");
@@ -164,7 +165,7 @@ public class Lista {
 
         if (actual != null) {
             while (actual != null) {
-                if (actual.libro.getTitulo() == titulo) {
+                if (actual.libro.getTitulo().equalsIgnoreCase(titulo.trim())) {
                     encontrado = true;
 
                     if (actual == primero) {
