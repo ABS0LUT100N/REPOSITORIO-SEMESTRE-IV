@@ -102,6 +102,7 @@ public class Lista {
         return cantidadDatos;
     }
 
+
     public void buscarNodoNombre() {
 
         Nodo aux = new Nodo();
