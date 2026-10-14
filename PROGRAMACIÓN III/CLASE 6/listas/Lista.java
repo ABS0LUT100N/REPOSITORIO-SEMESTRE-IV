@@ -194,6 +194,16 @@ public class Lista {
                     aux.persona.imprimir();
                     System.out.println("");
 
+                    System.out.println("Digite la información a modificar:");
+                    System.out.println("Nombre:");
+                    aux.persona.setNombre(leer.nextLine());
+                    System.out.println("Edad:");
+                    aux.persona.setEdad(leer.nextInt());
+                    leer.nextLine();
+                    System.out.println("");
+                    System.out.println("Nodo actualizado con éxito.");
+                    aux.persona.imprimir();
+
                 }
                 aux = aux.siguiente;
             }

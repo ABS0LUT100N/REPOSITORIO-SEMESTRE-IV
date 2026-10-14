@@ -109,6 +109,7 @@ public class Lista {
         if (aux != null) {
 
             while (aux != null) {
+                
                 if (aux.libro.getTitulo() == titulo) {
                     encontrado = true;
 
