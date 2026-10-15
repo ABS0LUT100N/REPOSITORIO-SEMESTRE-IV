@@ -1,15 +1,11 @@
 package supermercado;
 
-import java.util.Scanner;
-
 public class Lista {
 
     Nodo primero = new Nodo();
     Nodo ultimo = new Nodo();
     Producto datosProducto;
     int cantidadDatos;
-
-    Scanner leer = new Scanner(System.in);
 
     public Lista() {
         primero = null;

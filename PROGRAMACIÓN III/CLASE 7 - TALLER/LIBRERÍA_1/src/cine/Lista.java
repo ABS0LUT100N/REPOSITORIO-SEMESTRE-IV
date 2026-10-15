@@ -1,6 +1,5 @@
 package cine;
 
-import java.util.Scanner;
 
 public class Lista {
 
@@ -10,8 +9,6 @@ public class Lista {
     int cantidadDatos;
     double precio;
     double canTotal;
-
-    Scanner leer = new Scanner(System.in);
 
     public Lista() {
         primero = null;
@@ -24,11 +21,12 @@ public class Lista {
 
         Nodo nuevo = new Nodo();
 
+        int numero = cantidadDatos + 1;
         int edad = (int) (Math.random() * 56 + 5);
         int id = ((int) (Math.random() * 1000)) + 10000;
         System.out.println("---------------------------------------");
         System.out.println("");
-        System.out.println("Generando persona número: " + cantidadDatos);
+        System.out.println("Generando persona número: " + numero);
         System.out.println("");
         System.out.println("---------------------------------------");
 
