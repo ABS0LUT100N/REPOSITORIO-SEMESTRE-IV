@@ -75,7 +75,7 @@ body {
     background:
         radial-gradient(circle at top right, rgba(124, 58, 237, 0.15), transparent 45%),
         linear-gradient(rgba(1, 1, 3, 0.92), rgba(1, 1, 3, 0.92)),
-        url('Images/9610.jpg'),
+        url('../Images/9610.jpg'),
         var(--bg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1209,7 +1209,7 @@ body.light {
     background:
         radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 45%),
         linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.90)),
-        url('Images/9611.jpg'),
+        url('../Images/9611.jpg'),
         #ffffff !important;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1600,11 +1600,18 @@ function actualizarBotonTema() {
 
     const modoClaro = document.body.classList.contains("light");
 
-    boton.textContent = modoClaro ? "☀️" : "🌙";
-    boton.title = modoClaro ? "Activar modo oscuro" : "Activar modo claro";
+    const icono = modoClaro
+        ? "images/sol.png"
+        : "images/luna.png";
+
+    boton.innerHTML = `<img src="${icono}" alt="" class="icono-tema">`;
+
+    boton.title = modoClaro
+        ? "Activar modo oscuro"
+        : "Activar modo claro";
+
     boton.setAttribute("aria-label", boton.title);
 }
-
 
 /* =====================================================
    ESCAPAR HTML
