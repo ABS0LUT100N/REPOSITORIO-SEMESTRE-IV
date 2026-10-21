@@ -1,0 +1,18 @@
+:root {
+    --principal: #634bce59;
+    /* hexadecimal */
+    --texto: rgb(35, 43, 51);
+    /* rgb */
+    --fondo: rgb(247, 243, 240);
+    /* nombre */
+}
+
+header{
+    color: aliceblue;
+  background-color: var(--principal);
+}
+
+body{
+  color: aliceblue;
+  background-color: #08090d;
+}
