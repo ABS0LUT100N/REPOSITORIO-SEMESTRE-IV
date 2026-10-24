@@ -121,7 +121,7 @@ public class ListaDoble {
                     cantidadDatos--;
 
                     calcularPrecio(personaAtendida);
-                    mostrarListaPU();
+                    System.out.println("Cantidad de personas restantes: " + cantidadDatos);
                 }
 
                 actual = actual.siguiente;
@@ -204,22 +204,27 @@ public class ListaDoble {
 
                 if (aux.informacion.getEdad() >= 5 && aux.informacion.getEdad() <= 12) {
 
-                    precio = 5.000;
+                    precio = 5000;
 
                 } else if (aux.informacion.getEdad() >= 13 && aux.informacion.getEdad() <= 17) {
 
-                    precio = 7.000;
+                    precio = 7000;
 
                 } else if (aux.informacion.getEdad() >= 18 && aux.informacion.getEdad() <= 59) {
 
-                    precio = 12.000;
+                    precio = 12000;
 
                 } else if (aux.informacion.getEdad() >= 60) {
 
-                    precio = 8.000;
+                    precio = 8000;
                 }
 
                 else {
+
+                    System.out.println("Persona con el ID:" + aux.informacion.getId() + " no admitida, menor de 5 años.");
+
+                    precio = 0;
+
                 }
 
                 canTotal += precio;
@@ -241,16 +246,16 @@ public class ListaDoble {
         int edad = personaPrueba.getEdad();
 
         if (edad >= 5 && edad <= 12) {
-            precio = 5.000;
+            precio = 5000;
 
         } else if (edad >= 13 && edad <= 17) {
-            precio = 7.000;
+            precio = 7000;
 
         } else if (edad >= 18 && edad <= 59) {
-            precio = 12.000;
+            precio = 12000;
 
         } else if (edad >= 60) {
-            precio = 8.000;
+            precio = 8000;
 
         } else {
             System.out.println("----------------------------------------------------------");
