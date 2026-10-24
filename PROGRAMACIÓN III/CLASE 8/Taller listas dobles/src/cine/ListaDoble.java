@@ -102,27 +102,29 @@ public class ListaDoble {
         boolean encontrado = false;
         actual = primero;
 
-        
         if (actual != null) {
 
             while (actual != null && encontrado == false) {
 
                 if (actual == primero) {
 
+                    Persona personaAtendida = actual.informacion;
                     primero = primero.siguiente;
 
                     if (primero != null) {
                         primero.anterior = null;
-
                     } else {
-
                         ultimo = null;
                     }
 
                     encontrado = true;
-                    calcularPrecio();
                     cantidadDatos--;
+
+                    calcularPrecio(personaAtendida);
+                    mostrarListaPU();
                 }
+
+                actual = actual.siguiente;
             }
 
             if (encontrado == false) {
@@ -140,7 +142,6 @@ public class ListaDoble {
         }
 
         System.out.println("");
-
     }
 
     public void mostrarListaPU() {
@@ -234,52 +235,38 @@ public class ListaDoble {
         return canTotal;
     }
 
-    public double calcularPrecio() {
+    public double calcularPrecio(Persona personaPrueba) {
 
-        Nodo aux = new Nodo();
         double precio = 0;
+        int edad = personaPrueba.getEdad();
 
-        aux = primero;
+        if (edad >= 5 && edad <= 12) {
+            precio = 5.000;
 
-        if (aux != null) {
+        } else if (edad >= 13 && edad <= 17) {
+            precio = 7.000;
 
-            while (aux != null) {
+        } else if (edad >= 18 && edad <= 59) {
+            precio = 12.000;
 
-                if (aux.informacion.getEdad() >= 5 && aux.informacion.getEdad() <= 12) {
+        } else if (edad >= 60) {
+            precio = 8.000;
 
-                    precio = 5.000;
-
-                } else if (aux.informacion.getEdad() >= 13 && aux.informacion.getEdad() <= 17) {
-
-                    precio = 7.000;
-
-                } else if (aux.informacion.getEdad() >= 18 && aux.informacion.getEdad() <= 59) {
-
-                    precio = 12.000;
-
-                } else if (aux.informacion.getEdad() >= 60) {
-
-                    precio = 8.000;
-                }
-
-                else {
-
-                    System.out.println("----------------------------------------------------------");
-                    System.out.println("La persona es menor de 5 años, no puede ingresar al cine.");
-                    precio = 0;
-                    System.out.println("----------------------------------------------------------");
-                }
-
-                aux = aux.siguiente;
-            }
-
+        } else {
+            System.out.println("----------------------------------------------------------");
+            System.out.println("La persona es menor de 5 años, no puede ingresar al cine.");
+            System.out.println("----------------------------------------------------------");
         }
 
         System.out.println("---------------------------------------");
         System.out.println("Persona atendida con exito!!");
+        System.out.println(".............................");
+        personaPrueba.imprimir();
         System.out.println("Precio: $" + precio);
+        System.out.println(".............................");
         System.out.println("---------------------------------------");
 
         return precio;
     }
+
 }

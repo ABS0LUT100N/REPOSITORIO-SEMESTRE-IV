@@ -7,7 +7,7 @@ public class App {
 
     ListaDoble listaCine = new ListaDoble();
     
-        int random = (int) (Math.random() * 11);
+        int random = (int) (Math.random() * 5 + 5);
 
         for (int i = 0; i < random; i++) {
 
